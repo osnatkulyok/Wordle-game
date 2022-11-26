@@ -1,5 +1,4 @@
-# final-project
-# Wordle-game
+# Wordle-game  _Final-project
 
 Final project scaffold
 
@@ -8,6 +7,7 @@ create 'src' directory.
 install 'sass', any http server (http-server, live-server).
 add 'build' and 'dev' scripts.
 add .gitignore with all files/directories we don't want to upload to repo.
+
 
 '''shell
 # install sass and put it in out dev-dependencies   
