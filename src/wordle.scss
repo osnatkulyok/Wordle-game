@@ -7,6 +7,7 @@
         flex-wrap:nowrap;
     }
 }
+//check tje classes
 @media(max-width: 991.98px) {
     .mobileColumn { 
         display:flex;
@@ -15,13 +16,24 @@
         justify-content:center;
         flex-wrap:nowrap;
     }
+}
+*{
+ 
+    box-sizing: border-box;
+}
+//     @media (min-width: 415px)
+//     root {
+//     --header-height: 65px;
+// }
+//$background-color: rgb(109, 146, 154);
+
 .body {
     background-color: rgb(109, 146, 154);
     }
-}
+
 .header {
-    background-color: aqua;
-    grid-area: header;
+    // background-color: rgb(27, 210, 210);
+    
     /*position: sticky;*/
     font-weight: 100;
     width: 100%;
@@ -30,22 +42,57 @@
     background-repeat: no-repeat;
     margin: 0;
 }
-.header > h1 {
-    margin: 0;
-
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding: 15px 30px;
+.header {
+    display: flex;
+    grid-area: header;
+    // flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    padding: 0px var(--header-padding-x);
+    // height: var(--header-height);
+    color: var(--color-tone-1);
+    border-bottom: 1px solid var(--color-tone-4);
 }
+
+.title {
+    // display: flex;
+    font-family: BN balls;
+    font-size: 35px;
+    font-weight: bold;
+    margin: 15px 20px;
+    
+}
+.header-tools {
+    display: flex;
+    justify-content: space-between;
+    padding: 3.5px;
+    // background-color: #222;
+    padding-left: 70%;
+    width: 20px;
+}
+.header-tools > button {
+    margin-left: 3.8px;
+    border: none;
+    background-color: rgb(109, 146, 154);
+}
+//why doesn't it work???
+// .game-icon {
+//     width: 24%;
+//     height: 24%;
+// }
+
 .guest-board {
     display: grid;
     justify-content: space-around;
     // align-items: center;
     // flex-grow: 1;
     // overflow: hidden;
-    margin-top: 20px;
-    margin-left: 500px;
+    margin: 40px 40%;
+    // margin-left: 500px;
     width: 250px;
-    height: 400px;
+    height: 370px;
+    // height: calc(100%-270px); don't understund what was the prob?
     grid-gap: 5px;
     
     grid-template-columns: repeat(5, 2fr);
@@ -70,11 +117,9 @@
 .keyword-board  {
     display: grid;
     justify-content: space-around;
-    margin: 25px;
-    display: grid;
     justify-content: space-around;
     
-    margin-left: 350px;
+    margin: 25px 450px;
     width: 500px;
     height: 120px;
     grid-gap: 5px;
@@ -82,8 +127,12 @@
     grid-template-columns: repeat(9, 2fr);
     grid-template-rows: repeat(3, 2fr);
     grid-template-areas: "po po po po po po po po po po"
-                          "po po po po po po po po po"
+                        "po po po po po po po po"
                           "po po po po po po po po po po ";
+                          
+    // width: 100%;
+    margin: 10px auto 20px;
+    touch-action: manipulation;
                           
     
 }
@@ -96,3 +145,15 @@
 .keyword-board > button:hover {
     background-color: rgb(97, 225, 225);
   }
+
+.footer {
+    display: flex;
+    justify-content: center;
+    // background-color: aqua  ;
+    grid-area: footer;
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: large;
+    // width: 100%;
+}  
